@@ -15,23 +15,29 @@
                 <div class="board-column" *ngFor = "let column of board.columns" >
                     <div class="column-title">
                         {{column.name}}
-                        <button class="button is-small">
-                            <span class="icon is-small">
-                              <i class="fas fa-heading">+</i>
-                            </span>
-                          </button>
                     </div> 
-                    <div class="tasks-container"              
+                    <div class = "b">
+                    <button type="button" class="add" (click)="add(column.name)">Add</button>
+                    </div>
+                    <div class="tasks-container"           
                     cdkDropList
                     [cdkDropListData]="column.tasks"
                     (cdkDropListDropped)="drop($event)">
-                        <div class = "task" *ngFor="let item of column.tasks" cdkDrag>
-                            {{item}}
+                        <div class = "task" contenteditable="true" *ngFor="let item of column.tasks" cdkDrag>
+                           <span contenteditable="typing">{{item}}</span>
                         </div>
                     </div>
+                    <div class ="del"                     
+                    cdkDropList id ="de"
+                    [cdkDropListData]="column.tasks"
+                    (cdkDropListDropped)="drop($event)">
+                        <p>DELETE</p>
+                    </div>
                 </div>
-               
             </div>
         </div>
     </div>
 </div>
+
+
+<a class="b" href="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=dGVhbTVwcm9qZWN0bG9jOHJAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" target="_blank">Team Five Calendar</a>

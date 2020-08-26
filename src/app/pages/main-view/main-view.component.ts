@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Column } from '../../models/column.model';
 import { Board } from '../../models/board.model';
@@ -46,7 +46,10 @@ export class MainViewComponent implements OnInit {
 
 
   drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
+    if (event.container.id ==="de"){
+      event.previousContainer.data.splice(event.previousIndex, 1);
+    }
+    else if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(event.previousContainer.data,
@@ -57,5 +60,18 @@ export class MainViewComponent implements OnInit {
   }
 
 
+  add(currentColumn:string) {
+    var current = currentColumn;
+    console.log(current)
+    for(let i = 0; i<= 3;i++){
+    if(this.board.columns[i].name == current){
+      console.log(this.board.columns[i].tasks.splice(0, 0, "-"))
+    }
+  }
+    console.log(this.board.columns[0])
+    console.log(this.board.columns[0].name)
+    
+
+ }
 
 }

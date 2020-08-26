@@ -55,6 +55,8 @@
                        flex-direction: column;
                        flex-grow: 1;
                        flex-basis: 0;
+                       
+                    
 
                        min-width: 300px;
                        margin: 50px;
@@ -124,9 +126,30 @@
   }
 
 
-   .is-small {
-        
+  .add {
+    background-color: #8ce2a650;
+    width: 100%; 
+    color: white;
+    border-radius: 4px;
+    font-family:'Lato', sans-serif;
+    font-weight: bold;
+   }
 
-          box-shadow: 0 5px 5px -3px rgba(0,0,0,0.05),
-          0 3px 14px 2px rgba(0,0,0, .05)
+   .del{
+       width: 100%; 
+       vertical-align: middle;   
+       text-align: center; 
+       background-color: rgba(255, 0, 0, 0.377);  
+       font-family:'Lato', sans-serif;
+       font-size: 20px;
+       font-weight: bold;
+       min-height: 25px;
+       min-width: 300px;
+       display:table-cell;
+       color: white;
+       border-radius: 4px;
+       display:inline-block;
+       display: flex;
+       flex-direction: column;
+       
    }
