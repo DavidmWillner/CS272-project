@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'kanban';
 
-  
+  showVar : boolean = false;
+    
+  showMe():boolean{
+    this.showVar =!this.showVar;
+    return this.showVar;
+  }
+
+
+
 }

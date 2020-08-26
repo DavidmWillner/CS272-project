@@ -2,6 +2,9 @@ import { Component, OnInit, ɵCompiler_compileModuleSync__POST_R3__ } from '@ang
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Column } from '../../models/column.model';
 import { Board } from '../../models/board.model';
+import { ParticlesConfig} from 'particles.js'
+
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-main-view',
@@ -39,9 +42,12 @@ export class MainViewComponent implements OnInit {
 
   ]);
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit() {
+    // https://vincentgarreau.com/particles.js/
+    particlesJS('particles-js', ParticlesConfig, function() {
+        console.log('callback - particles.js config loaded');
+      });
+    }
 //cdk drag and drop code from https://material.angular.io/cdk/drag-drop/overview
 
 
@@ -72,6 +78,10 @@ export class MainViewComponent implements OnInit {
     console.log(this.board.columns[0].name)
     
 
+ }
+
+ save_d() {
+  console.log("this card was saved")
  }
 
 }

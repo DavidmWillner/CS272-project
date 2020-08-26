@@ -1,2 +1,9 @@
-<router-outlet></router-outlet>
-<app-calculator></app-calculator>
+
+<div>
+    <a type ="button" href="https://calendar.google.com/calendar/b/2/r?tab=wc" target="_blank" ><img src="https://collegeinfogeek.com/wp-content/uploads/2016/08/Google_Calendar_Logo.png" alt="Google Calendar" style="width:50px;height:50px;"></a>
+    <a type ="button" href="https://drive.google.com/drive/u/2/my-drive" target="_blank" ><img src="https://services.google.com/fh/files/misc/logo_drive_color_2x_web_96dp.png" alt="Google Calendar" style="width:50px;height:50px;"></a>
+<a type ="button" label = "click" (click) ="showMe()" target="_blank" ><img src="https://compass1.org/wp-content/uploads/2015/06/Calculator_clipped_rev_1.png" alt="Google Calendar" style="width:50px;height:50px;"></a>
+<div id="particles-js">
+<router-outlet *ngIf = "showMe()"></router-outlet> </div>
+<app-calculator *ngIf = "showMe()"></app-calculator>
+

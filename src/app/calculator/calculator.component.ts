@@ -69,6 +69,8 @@ export class CalculatorComponent implements OnInit {
     this.waitForSecondNumber = false;
   }
 
+ 
+
   ngOnInit(): void {
   }
 

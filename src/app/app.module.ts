@@ -7,7 +7,10 @@ import { MainViewComponent } from './pages/main-view/main-view.component';
 import { FormsModule } from '@angular/forms'
 
 import { HttpClientModule } from '@angular/common/http';
-import { CalculatorComponent } from './calculator/calculator.component'; 
+import { CalculatorComponent } from './calculator/calculator.component';
+import { FooterComponent } from './footer/footer.component';
+
+
 
 
 
@@ -17,7 +20,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
   declarations: [
     AppComponent,
     MainViewComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    FooterComponent,
+  
   ],
   imports: [
     BrowserModule,

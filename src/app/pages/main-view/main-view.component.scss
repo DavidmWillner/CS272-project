@@ -10,6 +10,7 @@
     font-weight: bold;
 }
 
+
 .has-gradient-text {
     background: -webkit-linear-gradient(#13f7f4, #2af598);
     -webkit-background-clip: text;
@@ -29,7 +30,7 @@
 
 
         .board-bar{
-            background: rgba(grey, 0.5);
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(31, 28, 28));
             padding: 8px 15px;
 
             .board-name {
@@ -45,6 +46,7 @@
         display: flex;
         flex-grow: 1;
         overflow-x: auto;
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(102, 7, 7));
 
             .board-columns{
                 display: flex;
@@ -153,3 +155,5 @@
        flex-direction: column;
        
    }
+
+
